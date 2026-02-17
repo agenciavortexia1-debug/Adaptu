@@ -18,7 +18,6 @@ const Footer: React.FC = () => {
           <div className="flex gap-8 text-sm text-slate-500">
             <a href="#" className="hover:text-emerald-400 transition-colors">Termos de Uso</a>
             <a href="#" className="hover:text-emerald-400 transition-colors">Privacidade</a>
-            <a href="#" className="hover:text-emerald-400 transition-colors">LinkedIn</a>
           </div>
 
           <div className="text-sm text-slate-500">
