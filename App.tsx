@@ -1,14 +1,14 @@
 
 import React, { useState } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Problem from './components/Problem';
-import Method from './components/Method';
-import Value from './components/Value';
-import Benefits from './components/Benefits';
-import DiagnosisTool from './components/DiagnosisTool';
-import Footer from './components/Footer';
-import Modal from './components/Modal';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import Problem from './components/Problem.tsx';
+import Method from './components/Method.tsx';
+import Value from './components/Value.tsx';
+import Benefits from './components/Benefits.tsx';
+import DiagnosisTool from './components/DiagnosisTool.tsx';
+import Footer from './components/Footer.tsx';
+import Modal from './components/Modal.tsx';
 
 const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

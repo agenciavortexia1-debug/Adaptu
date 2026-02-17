@@ -1,6 +1,6 @@
 
 import React from 'react';
-import DashboardPreview from './DashboardPreview';
+import DashboardPreview from './DashboardPreview.tsx';
 
 const Value: React.FC = () => {
   return (
