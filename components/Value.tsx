@@ -29,7 +29,7 @@ const Value: React.FC = () => {
               Muito além de um ERP. <br />Uma central de decisões.
             </h3>
             <p className="text-base text-slate-400 mb-6 leading-relaxed">
-              Como analista e desenvolvedor, entrego sistemas que pensam. Identificamos automaticamente onde você está perdendo dinheiro e onde pode otimizar sua equipe.
+              Temos uma equipe de analistas e desenvolvedores, 100% focados em entregar sistemas que pensam. Identificamos automaticamente onde você está perdendo dinheiro e onde pode otimizar sua equipe.
             </p>
             <ul className="space-y-3">
               {[
