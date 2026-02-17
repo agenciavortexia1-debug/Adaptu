@@ -47,16 +47,16 @@ const Header: React.FC<HeaderProps> = ({ onOpenDiagnosis }) => {
           onClick={(e) => scrollToSection(e, '#hero')}
           className="flex items-center gap-2 group"
         >
-          <div className="w-8 h-8 text-emerald-500 flex items-center justify-center">
+          <div className="w-7 h-7 text-emerald-500 flex items-center justify-center">
              <svg viewBox="0 0 24 24" className="w-full h-full fill-current" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2zM12 15.5l-4.5 2 4.5-11 4.5 11-4.5-2z"/>
              </svg>
           </div>
-          <span className="font-bold text-xl tracking-tight text-white">Adaptu</span>
+          <span className="font-bold text-lg tracking-tight text-white">Adaptu</span>
         </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <nav className="hidden md:flex items-center gap-6 text-xs font-medium text-slate-300">
           {menuItems.map((item) => (
             <a 
               key={item.href} 
@@ -69,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenDiagnosis }) => {
           ))}
           <button 
             onClick={onOpenDiagnosis}
-            className="px-6 py-2 bg-emerald-500 text-slate-950 rounded-md hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20 font-bold"
+            className="px-5 py-1.5 bg-emerald-500 text-slate-950 rounded-md hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20 font-bold"
           >
             Diagnóstico Gratuito
           </button>
@@ -81,11 +81,11 @@ const Header: React.FC<HeaderProps> = ({ onOpenDiagnosis }) => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           )}
@@ -94,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenDiagnosis }) => {
 
       {/* Mobile Menu Drawer */}
       <div className={`md:hidden absolute top-16 left-0 w-full bg-slate-900 border-b border-slate-800 transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pointer-events-none overflow-hidden'}`}>
-        <nav className="flex flex-col p-4 gap-4 text-slate-300 font-medium">
+        <nav className="flex flex-col p-4 gap-3 text-slate-300 text-sm font-medium">
           {menuItems.map((item) => (
             <a 
               key={item.href} 
@@ -110,7 +110,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenDiagnosis }) => {
               onOpenDiagnosis();
               setIsMenuOpen(false);
             }}
-            className="w-full py-3 bg-emerald-500 text-slate-950 rounded-md font-bold text-center"
+            className="w-full py-2.5 bg-emerald-500 text-slate-950 rounded-md font-bold text-center"
           >
             Diagnóstico Gratuito
           </button>

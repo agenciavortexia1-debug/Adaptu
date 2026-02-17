@@ -73,14 +73,14 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
   const renderContent = () => {
     if (submitted) {
       return (
-        <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 text-center py-10">
-          <div className="w-16 h-16 bg-emerald-900/30 text-emerald-400 rounded-md flex items-center justify-center mx-auto mb-6 border border-emerald-500/30">
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 text-center py-8">
+          <div className="w-14 h-14 bg-emerald-900/30 text-emerald-400 rounded-md flex items-center justify-center mx-auto mb-5 border border-emerald-500/30">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-white mb-2">Solicitação Enviada!</h3>
-          <p className="text-slate-400 mb-8 max-w-xs mx-auto">
+          <h3 className="text-xl font-bold text-white mb-2">Solicitação Enviada!</h3>
+          <p className="text-slate-400 text-sm mb-6 max-w-xs mx-auto">
             Recebemos seus dados. Um de nossos analistas entrará em contato em breve para agendar seu diagnóstico.
           </p>
           <button 
@@ -92,7 +92,7 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
               setDescription('');
               setPhone('');
             }} 
-            className="text-sm font-medium text-emerald-400 hover:text-emerald-300"
+            className="text-xs font-medium text-emerald-400 hover:text-emerald-300"
           >
             Enviar outra solicitação
           </button>
@@ -100,12 +100,12 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
       );
     }
 
-    const inputClasses = "w-full px-4 py-3 rounded-md border border-slate-800 bg-slate-900 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all outline-none text-white placeholder:text-slate-500";
-    const labelClasses = "block text-sm font-semibold text-slate-400 mb-2";
+    const inputClasses = "w-full px-4 py-2.5 rounded-md border border-slate-800 bg-slate-900 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all outline-none text-white text-sm placeholder:text-slate-500";
+    const labelClasses = "block text-xs font-semibold text-slate-400 mb-2";
 
     return (
-      <form onSubmit={handleSubmit} className="space-y-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="text-left">
             <label className={labelClasses}>
               Nome do Negócio
@@ -135,7 +135,7 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="text-left">
             <label className={labelClasses}>
               Faturamento Médio Mensal
@@ -175,7 +175,7 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
             Descreva seu processo e o que espera do sistema
           </label>
           <textarea 
-            rows={3}
+            rows={2}
             className={inputClasses}
             placeholder="Como funciona seu fluxo de trabalho atual?"
             value={description}
@@ -184,18 +184,18 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
           />
         </div>
 
-        {error && <p className="text-red-400 text-sm font-medium text-left">{error}</p>}
+        {error && <p className="text-red-400 text-xs font-medium text-left">{error}</p>}
         
         <button 
           type="submit"
           disabled={loading}
-          className={`w-full py-4 rounded-md font-bold text-lg transition-all flex items-center justify-center gap-3 ${
+          className={`w-full py-3.5 rounded-md font-bold text-base transition-all flex items-center justify-center gap-3 ${
             loading ? 'bg-slate-800 text-slate-500 cursor-not-allowed' : 'bg-emerald-500 text-slate-950 hover:bg-emerald-400 shadow-lg shadow-emerald-500/20 active:scale-[0.99]'
           }`}
         >
           {loading ? (
             <>
-              <svg className="animate-spin h-5 w-5 text-slate-500" viewBox="0 0 24 24">
+              <svg className="animate-spin h-4 w-4 text-slate-500" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
@@ -210,8 +210,8 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
   if (isModal) {
     return (
       <div className="text-center bg-slate-950 p-2 rounded-lg">
-        <h2 className="text-2xl font-extrabold text-white mb-2">Solicitar Diagnóstico</h2>
-        <p className="text-slate-400 mb-6 text-sm">
+        <h2 className="text-xl font-extrabold text-white mb-1.5">Solicitar Diagnóstico</h2>
+        <p className="text-slate-400 mb-5 text-xs">
           Preencha os dados e um analista avaliará sua operação.
         </p>
         {renderContent()}
@@ -220,7 +220,7 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
   }
 
   return (
-    <section id="diagnosis" className="py-24 bg-slate-950 text-white relative overflow-hidden scroll-mt-16">
+    <section id="diagnosis" className="py-20 bg-slate-950 text-white relative overflow-hidden scroll-mt-16">
       <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <pattern id="grid-dark" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -230,15 +230,15 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
         </svg>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-extrabold mb-6">Agende seu Diagnóstico Gratuito</h2>
-          <p className="text-slate-400 text-lg">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl lg:text-3xl font-extrabold mb-5">Agende seu Diagnóstico Gratuito</h2>
+          <p className="text-slate-400 text-base">
             Analisaremos seu fluxo de trabalho para identificar como economizar tempo e dinheiro.
           </p>
         </div>
 
-        <div className="bg-slate-900 rounded-lg shadow-2xl p-8 lg:p-12 border border-slate-800">
+        <div className="bg-slate-900 rounded-lg shadow-2xl p-7 lg:p-10 border border-slate-800">
           {renderContent()}
         </div>
       </div>

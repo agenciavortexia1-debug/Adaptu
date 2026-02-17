@@ -27,17 +27,17 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         className="absolute inset-0 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-300" 
         onClick={onClose} 
       />
-      <div className="relative bg-slate-900 rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-in zoom-in-95 slide-in-from-bottom-4 duration-300 border border-slate-800">
+      <div className="relative bg-slate-900 rounded-lg shadow-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto animate-in zoom-in-95 slide-in-from-bottom-4 duration-300 border border-slate-800">
         <button 
           onClick={onClose}
-          className="absolute top-6 right-6 text-slate-500 hover:text-emerald-400 transition-colors z-10"
+          className="absolute top-5 right-5 text-slate-500 hover:text-emerald-400 transition-colors z-10"
           aria-label="Fechar"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-        <div className="p-8 lg:p-10">
+        <div className="p-7 lg:p-9">
           {children}
         </div>
       </div>
