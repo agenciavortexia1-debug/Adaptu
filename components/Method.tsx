@@ -51,7 +51,7 @@ const Method: React.FC = () => {
               <div key={idx} className="relative flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group">
                 {/* Node / Marker */}
                 <div className="flex-shrink-0 z-10">
-                  <div className={`w-14 h-14 ${item.color} ${item.glow} text-slate-950 rounded-2xl flex items-center justify-center text-xl font-black shadow-xl ring-4 ring-slate-950 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                  <div className={`w-14 h-14 ${item.color} ${item.glow} text-white rounded-2xl flex items-center justify-center text-xl font-black shadow-xl ring-4 ring-slate-950 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
                     {item.step}
                   </div>
                 </div>
@@ -77,14 +77,6 @@ const Method: React.FC = () => {
                 )}
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Roadmap Footer Summary */}
-        <div className="mt-20 flex justify-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-slate-900 rounded-full border border-slate-800 animate-pulse">
-            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Entrega de Valor Contínua</p>
           </div>
         </div>
       </div>
