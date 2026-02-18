@@ -41,7 +41,7 @@ const DiagnosisTool: React.FC<DiagnosisToolProps> = ({ isModal = false }) => {
     setError(null);
 
     try {
-      const response = await fetch('https://2n8n-n8n.oggciy.easypanel.host/webhook-test/683f7819-556f-4f58-8a43-6b7ad93253a8', {
+      const response = await fetch('https://2n8n-n8n.oggciy.easypanel.host/webhook/683f7819-556f-4f58-8a43-6b7ad93253a8', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
