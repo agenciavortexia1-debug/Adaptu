@@ -40,8 +40,18 @@ const Method: React.FC = () => {
         </div>
 
         <div className="relative">
-          {/* Horizontal Line (Desktop) */}
-          <div className="hidden lg:block absolute top-7 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
+          {/* Horizontal Line with Chevrons (Desktop) */}
+          <div className="hidden lg:block absolute top-7 left-0 w-full h-px bg-emerald-500/20">
+            <div className="absolute inset-0 flex justify-around items-center px-[10%]">
+              {[1, 2].map((i) => (
+                <div key={i} className="flex text-emerald-600/50">
+                  <svg width="42" height="20" viewBox="0 0 42 20" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M11 4l6 6-6 6M21 4l6 6-6 6M31 4l6 6-6 6" />
+                  </svg>
+                </div>
+              ))}
+            </div>
+          </div>
           
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-8 relative">
             {/* Vertical Line (Mobile) */}
@@ -67,14 +77,7 @@ const Method: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Arrow Decor (Desktop) */}
-                {idx < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-7 -right-4 translate-x-1/2 text-emerald-500/20">
-                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                )}
+                {/* Arrow Decor removed as it is now integrated into the horizontal line */}
               </div>
             ))}
           </div>

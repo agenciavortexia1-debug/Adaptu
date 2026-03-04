@@ -43,9 +43,18 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <div className="relative z-10">
-            <h1 className="text-3xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
-              Seu negócio não cabe em uma caixa. <br />
-              <span className="text-emerald-400">Por que sua plataforma de gestão deveria ser assim?</span>
+            <h1 className="text-3xl lg:text-5xl font-extrabold text-white leading-tight mb-5 relative">
+              Seu negócio não cabe <br /> em uma caixa. <br />
+              <span className="text-emerald-400">
+                Por que sua plataforma <br /> de gestão <span className="relative inline-block px-1 mx-0.5"><span className="absolute inset-0 border border-emerald-500/40 rounded-sm -rotate-1"></span>deveria</span> ser <br /> assim?
+              </span>
+              
+              {/* Decorative Arrow pointing to text */}
+              <div className="absolute -top-6 left-1/2 lg:left-3/4 text-emerald-500/40 hidden lg:block">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-12">
+                  <path d="M10 10C25 5 45 15 50 40M50 40L42 35M50 40L55 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
             </h1>
             
             <p className="text-base lg:text-lg text-slate-400 mb-8 max-w-lg leading-relaxed">
@@ -105,6 +114,12 @@ const Hero: React.FC = () => {
               
               {/* Realistic Mobile Device */}
               <div className="absolute -bottom-8 -left-2 md:-left-10 w-36 md:w-52 transform -rotate-6 hover:rotate-0 transition-all duration-1000 group">
+                {/* Decorative Arrow from Phone to Dashboard */}
+                <div className="absolute -top-12 -right-12 text-emerald-500/30 hidden md:block">
+                  <svg width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 50C20 30 40 10 70 20M70 20L62 25M70 20L65 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
                 <div className="relative bg-slate-900 p-[5px] rounded-[1.8rem] shadow-[0_30px_60px_-10px_rgba(0,0,0,0.8)] ring-1 ring-slate-800">
                   <div className="relative bg-black rounded-[1.5rem] overflow-hidden aspect-[9/19.5] ring-1 ring-emerald-500/30">
                     <img 

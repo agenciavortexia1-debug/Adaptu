@@ -1,20 +1,9 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Adaptu - Sistemas Sob Medida
 
-# Run and deploy your AI Studio app
+Landing page de alta conversão para serviços de desenvolvimento de sistemas de gestão sob medida.
 
-This contains everything you need to run your app locally.
+## Alterações Recentes
 
-View your app in AI Studio: https://ai.studio/apps/drive/1B2K6DYwwbgp9znj5P3g5xf2gH6Idjaei
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Footer:** Remoção dos links de "Termos de Uso" e "Privacidade".
+- **Hero:** Ajuste nas quebras de linha do título, destaque na palavra "deveria" e adição de setas decorativas.
+- **Método:** Novo design de transição entre os passos com linha contínua e chevrons.

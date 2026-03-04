@@ -15,11 +15,6 @@ const Footer: React.FC = () => {
             <span className="font-bold text-lg tracking-tight text-white">Adaptu</span>
           </div>
           
-          <div className="flex gap-8 text-sm text-slate-500">
-            <a href="#" className="hover:text-emerald-400 transition-colors">Termos de Uso</a>
-            <a href="#" className="hover:text-emerald-400 transition-colors">Privacidade</a>
-          </div>
-
           <div className="text-sm text-slate-500">
             © {new Date().getFullYear()} Adaptu Consultoria. Focado em ROI.
           </div>
